@@ -1,0 +1,5 @@
+[yim]
+node0 ansible_ssh_host=34.125.129.10
+node1 ansible_ssh_host=34.125.184.74
+node2 ansible_ssh_host=34.125.112.110
+node3 ansible_ssh_host=34.125.93.100

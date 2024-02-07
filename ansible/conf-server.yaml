@@ -1,0 +1,19 @@
+- hosts: yim
+  remote_user: freddy
+  gather_facts: no
+  tasks:
+    - name: clone yimchain
+      git:
+        repo: "https://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:x-oauth-basic@github.com/seafooler/yimchain.git"
+        dest: /home/freddy/yimchain
+    - name: build yimchain
+      shell: /usr/local/go/bin/go build .
+      args:
+        chdir: /home/freddy/yimchain
+        executable: /bin/bash
+      environment:
+        GOPROXY: goproxy.cn,direct
+    - name: copy configuration file
+      copy:
+        src: /Users/freddy/go/src/yimchain/config_gen/{{inventory_hostname}}.yaml
+        dest: /home/freddy/yimchain/config.yaml

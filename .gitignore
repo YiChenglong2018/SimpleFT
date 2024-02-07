@@ -1,0 +1,5 @@
+.idea
+.txt
+test*
+config/config.yaml
+config_gen/keys*.yaml

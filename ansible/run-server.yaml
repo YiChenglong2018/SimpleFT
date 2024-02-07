@@ -1,0 +1,12 @@
+- hosts: yim
+  remote_user: freddy
+  gather_facts: no
+  tasks:
+    - name: create testbed dirs
+      file:
+        path: /home/freddy/testbed
+        state: directory
+    - name: run yimchain as a daemon
+      shell: "(nohup ./yimchain > /home/freddy/testbed/log0.txt 2>&1 &)"
+      args:
+        chdir: /home/freddy/yimchain

@@ -1,0 +1,9 @@
+- hosts: yim
+  remote_user: freddy
+  gather_facts: no
+  tasks:
+    - name: kill yimchain
+      shell: sudo killall yimchain
+      ignore_errors: yes
+    - name: clean the testbed directory
+      shell: rm -rf /home/freddy/testbed

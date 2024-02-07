@@ -1,0 +1,24 @@
+---
+################################################################################
+#
+#   CONFIGURATIONS
+#
+#   - Nest keys where appropriate, and sort alphabetically for easier parsing.
+#
+################################################################################
+can_propose_block: true
+IPs:
+  node0: 34.125.129.10
+  node1: 34.125.184.74
+  node2: 34.125.112.110
+  node3: 34.125.93.100
+expectation: 1
+log_level: 3
+peers_p2p_port:
+  node0: 9000
+  node1: 9000
+  node2: 9000
+  node3: 9000
+rpc_listen_port: 9500
+max_pool: 10
+sortition_enabled: false
